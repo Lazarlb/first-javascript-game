@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>GAME</title>
+    <title>PIG GAME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,99 +15,32 @@
 </head>
 
 <body>
-    <section>
-        <div class="row empty"></div>
-        <div class="row">
-            <div class="container game-holder">
-                <div class="row">
-                    <div class="col-12 new-game">
-                        <div>
-                            <span>
-                                <i class="fas fa-plus-circle"></i>
-                            </span>
-                            <h5>
-                                NEW GAME
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 players">
-                        <div>
-                            <h3>
-                                PLAYER 1
-                            </h3>
-                            <span>
-                                <i class="fas fa-circle"></i>
-                            </span>
-                        </div>
-                        <div class="result">
-                            0
-                        </div>
-                    </div>
-                    <div class="col-4">
-                       <div>
-                            <img src="../images/1.svg" alt="nema slika">
-                       </div>
-                    </div>
-                    <div class="col-4 players">
-                        <div>
-                            <h3>
-                                PLAYER 2
-                            </h3>
-                            <span>
-                                <i class="fas fa-circle"></i>
-                            </span>
-                        </div>
-                        <div class="result">
-                            0
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 score-holder">
-                        <div class="score">
-                            <p>
-                                CURRENT
-                            </p>
-                            <p class="number">
-                                0
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-4 instructions-holder">
-                        <div class="row instructions">
-                            <span>
-                                <i class="fas fa-sync-alt"></i>
-                                <p>
-                                    ROLL DICE
-                                </p>
-                            </span>
-                        </div>
-                        <div class="row instructions">
-                            <span>
-                                <i class="fas fa-arrow-alt-circle-down"></i>
-                                <p>
-                                    HOLD
-                                </p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-4 score-holder">
-                        <div class="score">
-                            <p>
-                                CURRENT
-                            </p>
-                            <p class="number">
-                                0
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <div class="wrapper clearfix">
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">43</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">11</div>
             </div>
         </div>
-        <div class="row empty"></div>
-    </section>
+
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+        <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/243004/dice-5.png" alt="Dice" class="dice">
+    </div>
+
 
     <!--SCRIPT-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
